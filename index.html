@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #8B4513 0%, #DEB887 50%, #8B4513 100%);
+            min-height: 100vh;
+            font-family: 'Times New Roman', serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .scroll-container {
+            position: relative;
+            max-width: 800px;
+            width: 100%;
+            background: linear-gradient(to bottom, 
+                #f4f1e8 0%, 
+                #f9f6f0 20%, 
+                #f4f1e8 40%, 
+                #f9f6f0 60%, 
+                #f4f1e8 80%, 
+                #f9f6f0 100%);
+            border-radius: 15px;
+            box-shadow: 
+                0 10px 30px rgba(0,0,0,0.3),
+                inset 0 1px 0 rgba(255,255,255,0.2),
+                inset 0 -1px 0 rgba(0,0,0,0.1);
+            padding: 60px 50px;
+            margin: 20px;
+            transform: rotate(-0.5deg);
+            animation: subtle-float 6s ease-in-out infinite;
+        }
+        
+        @keyframes subtle-float {
+            0%, 100% { transform: rotate(-0.5deg) translateY(0px); }
+            50% { transform: rotate(-0.3deg) translateY(-3px); }
+        }
+        
+        .scroll-container::before,
+        .scroll-container::after {
+            content: '';
+            position: absolute;
+            left: -10px;
+            right: -10px;
+            height: 20px;
+            background: linear-gradient(to right, 
+                transparent 0%, 
+                rgba(139,69,19,0.3) 20%, 
+                rgba(139,69,19,0.5) 50%, 
+                rgba(139,69,19,0.3) 80%, 
+                transparent 100%);
+            border-radius: 50%;
+        }
+        
+        .scroll-container::before {
+            top: -10px;
+        }
+        
+        .scroll-container::after {
+            bottom: -10px;
+        }
+        
+        .aged-paper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 20% 30%, rgba(139,69,19,0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(139,69,19,0.08) 0%, transparent 40%),
+                radial-gradient(circle at 40% 80%, rgba(160,82,45,0.05) 0%, transparent 30%);
+            pointer-events: none;
+            border-radius: 15px;
+        }
+        
+        .content {
+            position: relative;
+            z-index: 2;
+            color: #2c1810;
+            line-height: 1.8;
+            text-align: center;
+        }
+        
+        .document-title {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+            color: #1a0f08;
+            letter-spacing: 2px;
+        }
+        
+        .document-text {
+            font-size: 1.3em;
+            margin-bottom: 25px;
+            text-align: justify;
+            text-indent: 2em;
+        }
+        
+        .signature-section {
+            margin-top: 50px;
+            text-align: right;
+            font-style: italic;
+            border-top: 2px solid rgba(139,69,19,0.3);
+            padding-top: 20px;
+        }
+        
+        .decorative-border {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 3px double rgba(139,69,19,0.4);
+            border-radius: 10px;
+            pointer-events: none;
+        }
+        
+        .wax-seal {
+            position: absolute;
+            bottom: -15px;
+            right: 50px;
+            width: 60px;
+            height: 60px;
+            background: radial-gradient(circle, #8B0000 0%, #DC143C  30%, #8B0000 100%);
+            border-radius: 50%;
+            border: 3px solid #654321;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: #FFD700;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+        
+        @media (max-width: 768px) {
+            .scroll-container {
+                padding: 40px 30px;
+                transform: rotate(0deg);
+            }
+            
+            .document-title {
+                font-size: 2em;
+            }
+            
+            .document-text {
+                font-size: 1.1em;
+            }
+            
+            .wax-seal {
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+                right: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="scroll-container">
+        <div class="aged-paper"></div>
+        <div class="decorative-border"></div>
+        
+        <div class="content">
+            <h1 class="document-title">Your Document Title</h1>
+            
+            <p class="document-text">
+                Replace this text with your own content. This is designed to look like an important historical document or proclamation. The styling gives it an aged parchment appearance with subtle animations and decorative elements.
+            </p>
+            
+            <p class="document-text">
+                You can add multiple paragraphs here. Each paragraph will be properly indented and formatted to maintain the formal document appearance. The text is justified and uses a classic serif font for readability and authenticity.
+            </p>
+            
+            <p class="document-text">
+                Feel free to customize the colors, fonts, or layout by modifying the CSS styles above. The scroll effect includes aging spots, decorative borders, and even a wax seal at the bottom for added authenticity.
+            </p>
+            
+            <div class="signature-section">
+                <p>Your Name<br>
+                Your Title<br>
+                Date</p>
+            </div>
+        </div>
+        
+        <div class="wax-seal">⚜</div>
+    </div>
+</body>
+</html>
