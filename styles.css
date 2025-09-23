@@ -3,7 +3,60 @@
             padding: 0;
             box-sizing: border-box;
         }
+
+        .intro-text {
+            font-size: 1.3em;
+            margin-bottom: 25px;
+            text-align: left;
+            color: #2c1810;
+        }
         
+        .tenet-text {
+            font-size: 1.3em;
+            margin-bottom: 40px;
+            text-align: left;
+            color: #2c1810;
+        }
+        
+        .tenet-heading {
+            color: #8B4513;
+            margin: 30px 0 10px 0;
+            font-size: 1.4em;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .practice-section {
+            max-width: 800px;
+            width: 100%;
+            background: linear-gradient(to bottom, 
+                        #f4f1e8 0%, 
+                        #f9f6f0 20%, 
+                        #f4f1e8 40%, 
+                        #f9f6f0 60%, 
+                        #f4f1e8 80%, 
+                        #f9f6f0 100%);
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+            padding: 50px;
+            color: #2c2c2c;
+        }
+
+        .practice-heading {
+            font-size: 1.8em;
+            margin: 0 0 20px 0;
+            color: #556B2F;
+            text-align: left;
+            letter-spacing: 1px;
+        }
+        
+        .subsection-heading {
+            color: #556B2F;
+            margin: 25px 0 10px 0;
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+
         body {
             background: linear-gradient(135deg, #8B4513 0%, #DEB887 50%, #8B4513 100%);
             min-height: 100vh;
@@ -142,7 +195,7 @@
             letter-spacing: 1px;
         }
         
-        .manifesto-text {
+        .statement-text {
             font-size: 1.3em;
             margin-bottom: 25px;
             text-align: left;
@@ -177,6 +230,17 @@
             pointer-events: none;
         }
 
+        ul {
+            margin-left: 20px;
+            line-height: 1.8;
+            font-size: 1.1em;
+            text-align: left;
+            }
+            
+        li {
+            margin-bottom: 8px;
+        }
+
         .footer {
             text-align: center;
             margin-top: 50px;
@@ -209,21 +273,21 @@
         }
         
         @media (max-width: 768px) {
-            .scroll-container {
-                padding: 40px 30px;
-                transform: rotate(0deg);
-            }
-            
-            .document-title {
-                font-size: 2em;
-            }
-            
-            .manifesto-text {
-                font-size: 1.1em;
-            }
-            
-            .nav-links {
-                flex-direction: column;
-                gap: 15px;
-            }
+                .scroll-container {
+                    padding: 40px 30px;
+                    transform: rotate(0deg);
+                }
+                
+                .document-title {
+                    font-size: 2em;
+                }
+                
+                .statement-text, .tenet-text {  /* Change this line */
+                    font-size: 1.1em;
+                }
+                
+                .nav-links {
+                    flex-direction: column;
+                    gap: 15px;
+                }
         }
