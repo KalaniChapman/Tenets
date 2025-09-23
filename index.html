@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Twelve Tenets</title>
+    <title>The Twelve Tenets - Option 1</title>
     <style>
         * {
             margin: 0;
@@ -15,10 +15,17 @@
             background: linear-gradient(135deg, #8B4513 0%, #DEB887 50%, #8B4513 100%);
             min-height: 100vh;
             font-family: 'Times New Roman', serif;
+            padding: 20px 0;
+        }
+        
+        .main-container {
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
-            padding: 20px;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
         
         .scroll-container {
@@ -38,9 +45,18 @@
                 inset 0 1px 0 rgba(255,255,255,0.2),
                 inset 0 -1px 0 rgba(0,0,0,0.1);
             padding: 60px 50px;
-            margin: 20px;
             transform: rotate(0deg);
             animation: subtle-float 6s ease-in-out infinite;
+        }
+        
+        .practice-section {
+            max-width: 800px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+            padding: 50px;
+            color: #2c2c2c;
         }
         
         @keyframes subtle-float {
@@ -135,25 +151,16 @@
             font-weight: bold;
         }
         
-        .section-heading {
+        .practice-heading {
             font-size: 1.8em;
-            margin: 40px 0 20px 0;
-            color: #1a0f08;
+            margin: 0 0 20px 0;
+            color: #2c2c2c;
             text-align: center;
             letter-spacing: 1px;
         }
         
-        .practice-heading {
-            font-size: 1.6em;
-            margin: 40px 0 20px 0;
-            color: #1a0f08;
-            text-align: left;
-            letter-spacing: 1px;
-        }
-        
         .subsection-heading {
-            text-align: left;
-            color: #8B4513;
+            color: #556B2F;
             margin: 25px 0 10px 0;
             font-size: 1.3em;
             font-weight: bold;
@@ -193,10 +200,10 @@
             text-align: center;
             margin-top: 50px;
             padding-top: 30px;
-            border-top: 2px solid rgba(139,69,19,0.3);
+            border-top: 2px solid rgba(85,107,47,0.3);
             font-style: italic;
             font-size: 1.1em;
-            color: #8B4513;
+            color: #556B2F;
         }    
 
         .social-media {
@@ -206,7 +213,7 @@
         }
         
         .social-link {
-            color: #8B4513;
+            color: #556B2F;
             text-decoration: none;
             display: inline-flex;
             align-items: center;
@@ -216,100 +223,89 @@
         .social-link:hover {
             text-decoration: underline;
         }
-        
-        @media (max-width: 768px) {
-            .scroll-container {
-                padding: 40px 30px;
-                transform: rotate(0deg);
-            }
-            
-            .document-title {
-                font-size: 2em;
-            }
-            
-            .tenet-text, .intro-text {
-                font-size: 1.1em;
-            }
-        }
     </style>
 </head>
 <body>
-    <div class="scroll-container">
-        <div class="aged-paper"></div>
-        <div class="decorative-border"></div>
-        
-        <div class="content">
-            <h1 class="document-title">The Twelve Tenets</h1>
-            <p class="subtitle">Preserving humanity in a digital age</p>
+    <div class="main-container">
+        <div class="scroll-container">
+            <div class="aged-paper"></div>
+            <div class="decorative-border"></div>
+            
+            <div class="content">
+                <h1 class="document-title">The Twelve Tenets</h1>
+                <p class="subtitle">Preserving humanity in a digital age</p>
 
-            <p class="intro-text">
-                These tenets support both individual fulfillment and collective wellbeing. The goal is not perfect adherence but honest engagement. Use these principles as reference points for reflection, growth, and dialogue.
-            </p>
+                <p class="intro-text">
+                    These tenets support both individual fulfillment and collective wellbeing. The goal is not perfect adherence but honest engagement. Use these principles as reference points for reflection, growth, and dialogue.
+                </p>
 
-            <div class="flourish">❦ ❦ ❦</div>
-            
-            <h2 class="tenet-heading">Practice Compassionate Wisdom</h2>
-            <p class="tenet-text">
-                Seek understanding before judgment. Combine kindness with discernment. Remember that suffering is universal - respond to others' pain (including your own) with both empathy and practical help.
-            </p>
-            
-            <h2 class="tenet-heading">Embrace Intellectual Humility</h2>
-            <p class="tenet-text">
-                Hold your beliefs lightly. Stay curious about what you might be wrong about. Welcome evidence that challenges your assumptions. Distinguish between confidence in your methods and certainty about your conclusions.
-            </p>
-            
-            <h2 class="tenet-heading">Balance Personal Growth with Service</h2>
-            <p class="tenet-text">
-                Develop your unique gifts and authentic self, but not at others' expense. Your well-being and others' well-being are interconnected. The healthiest individuals contribute to healthy communities.
-            </p>
-            
-            <h2 class="tenet-heading">Respect the Web of Existence</h2>
-            <p class="tenet-text">
-                Recognize your interdependence with other humans, other species, and the natural systems that sustain life. Act as a temporary steward rather than an owner of the resources you use.
-            </p>
-            
-            <h2 class="tenet-heading">Cultivate Inner and Outer Peace</h2>
-            <p class="tenet-text">
-                Work to understand and transform the sources of suffering within yourself - fear, hatred, greed, rigid thinking, delusion. Create conditions for peace in your relationships and communities. Address systemic injustices that create suffering.
-            </p>
-            
-            <h2 class="tenet-heading">Make Connections Across Difference</h2>
-            <p class="tenet-text">
-                Actively work to understand people whose backgrounds, beliefs, or experiences differ from yours. Look for common humanity beneath surface differences. Practice the difficult art of disagreeing without demonizing.
-            </p>
-            
-            <h2 class="tenet-heading">Seek Truth Through Multiple Ways of Knowing</h2>
-            <p class="tenet-text">
-                Value both empirical investigation and intuitive insight, rational analysis and embodied experience, scientific method and contemplative practice. Different questions may require different approaches to knowledge.
-            </p>
-            
-            <h2 class="tenet-heading">Embody Courageous Integrity</h2>
-            <p class="tenet-text">
-                Align your actions with your deepest values, even when difficult. Speak truth to power when necessary. Take responsibility for your choices and their consequences. Admit mistakes and make amends.
-            </p>
-            
-            <h2 class="tenet-heading">Question Systems of Power</h2>
-            <p class="tenet-text">
-                Remain vigilant about how authority operates in your life and society. Support structures that serve human well-being; challenge those that serve only the powerful. Remember that you too can become corrupted by power.
-            </p>
-            
-            <h2 class="tenet-heading">Honour Tradition and Innovation</h2>
-            <p class="tenet-text">
-                Learn from the accumulated wisdom of previous generations while remaining open to new understanding. Preserve what serves life; transform what causes harm. Meld ancient insights with contemporary knowledge.
-            </p>
-            
-            <h2 class="tenet-heading">Create More Than You Consume</h2>
-            <p class="tenet-text">
-                Whether through art, ideas, relationships, children, or service - contribute meaningfully. Leave the world better for your presence.
-            </p>
-            
-            <h2 class="tenet-heading">Face Mortality with Grace</h2>
-            <p class="tenet-text">
-                Accept the reality of aging, loss, and death while fully engaging with life. Use awareness of impermanence to appreciate the present moment and focus on what truly matters. Find ways to transcend the ego's boundaries.
-            </p>
-            
-            <div class="flourish">❦ ❦ ❦</div>
+                <div class="flourish">❦ ❦ ❦</div>
+                
+                <h2 class="tenet-heading">Practice Compassionate Wisdom</h2>
+                <p class="tenet-text">
+                    Seek understanding before judgment. Combine kindness with discernment. Remember that suffering is universal - respond to others' pain (including your own) with both empathy and practical help.
+                </p>
+                
+                <h2 class="tenet-heading">Embrace Intellectual Humility</h2>
+                <p class="tenet-text">
+                    Hold your beliefs lightly. Stay curious about what you might be wrong about. Welcome evidence that challenges your assumptions. Distinguish between confidence in your methods and certainty about your conclusions.
+                </p>
+                
+                <h2 class="tenet-heading">Balance Personal Growth with Service</h2>
+                <p class="tenet-text">
+                    Develop your unique gifts and authentic self, but not at others' expense. Your well-being and others' well-being are interconnected. The healthiest individuals contribute to healthy communities.
+                </p>
+                
+                <h2 class="tenet-heading">Respect the Web of Existence</h2>
+                <p class="tenet-text">
+                    Recognize your interdependence with other humans, other species, and the natural systems that sustain life. Act as a temporary steward rather than an owner of the resources you use.
+                </p>
+                
+                <h2 class="tenet-heading">Cultivate Inner and Outer Peace</h2>
+                <p class="tenet-text">
+                    Work to understand and transform the sources of suffering within yourself - fear, hatred, greed, rigid thinking, delusion. Create conditions for peace in your relationships and communities. Address systemic injustices that create suffering.
+                </p>
+                
+                <h2 class="tenet-heading">Make Connections Across Difference</h2>
+                <p class="tenet-text">
+                    Actively work to understand people whose backgrounds, beliefs, or experiences differ from yours. Look for common humanity beneath surface differences. Practice the difficult art of disagreeing without demonizing.
+                </p>
+                
+                <h2 class="tenet-heading">Seek Truth Through Multiple Ways of Knowing</h2>
+                <p class="tenet-text">
+                    Value both empirical investigation and intuitive insight, rational analysis and embodied experience, scientific method and contemplative practice. Different questions may require different approaches to knowledge.
+                </p>
+                
+                <h2 class="tenet-heading">Embody Courageous Integrity</h2>
+                <p class="tenet-text">
+                    Align your actions with your deepest values, even when difficult. Speak truth to power when necessary. Take responsibility for your choices and their consequences. Admit mistakes and make amends.
+                </p>
+                
+                <h2 class="tenet-heading">Question Systems of Power</h2>
+                <p class="tenet-text">
+                    Remain vigilant about how authority operates in your life and society. Support structures that serve human well-being; challenge those that serve only the powerful. Remember that you too can become corrupted by power.
+                </p>
+                
+                <h2 class="tenet-heading">Honour Tradition and Innovation</h2>
+                <p class="tenet-text">
+                    Learn from the accumulated wisdom of previous generations while remaining open to new understanding. Preserve what serves life; transform what causes harm. Meld ancient insights with contemporary knowledge.
+                </p>
+                
+                <h2 class="tenet-heading">Create More Than You Consume</h2>
+                <p class="tenet-text">
+                    Whether through art, ideas, relationships, children, or service - contribute meaningfully. Leave the world better for your presence.
+                </p>
+                
+                <h2 class="tenet-heading">Face Mortality with Grace</h2>
+                <p class="tenet-text">
+                    Accept the reality of aging, loss, and death while fully engaging with life. Use awareness of impermanence to appreciate the present moment and focus on what truly matters. Find ways to transcend the ego's boundaries.
+                </p>
+                
+                <div class="flourish">❦ ❦ ❦</div>
+            </div>
+        </div>
 
+        <div class="practice-section">
             <h2 class="practice-heading">Practice Notes</h2>
           
             <h2 class="subsection-heading">For Individuals:</h2>
@@ -335,17 +331,18 @@
                 <li>Create economic and political systems aligned with these principles</li>
                 <li>Regularly evaluate whether our structures serve human well-being</li>
             </ul>
-        </div>
-        <div class="footer">
-            For more information: <a href="mailto:follow@thetenets.org" style="color: #8B4513; text-decoration: underline;">follow@thetenets.org</a>
-        </div>
-        <div class="social-media">
-            <a href="https://bsky.app/profile/thetenets.org" class="social-link" target="_blank">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 2.104.139 3.309.139 5.283.902 6.488c.659.838 1.664 1.16 4.3-.701C7.954 4.747 10.913 8.686 12 10.8zm0 0c1.087-2.114 4.046-6.053 6.798-7.995C21.434.944 22.439 1.266 23.098 2.104c.763 1.205.763 3.179 0 4.384-.659.838-1.664 1.16-4.3-.701C16.046 4.747 13.087 8.686 12 10.8zm0 2.4c-1.087 2.114-4.046 6.053-6.798 7.995-2.636 1.861-3.641 1.539-4.3.701-.763-1.205-.763-3.179 0-4.384.659-.838 1.664-1.16 4.3.701C7.954 19.253 10.913 15.314 12 13.2zm0 0c1.087 2.114 4.046 6.053 6.798 7.995 2.636 1.861 3.641 1.539 4.3.701.763-1.205.763-3.179 0-4.384-.659-.838-1.664-1.16-4.3.701C16.046 19.253 13.087 15.314 12 13.2z"/>
-                </svg>
-                Follow on Bluesky
-            </a>
+
+            <div class="footer">
+                For more information: <a href="mailto:follow@thetenets.org" style="color: #556B2F; text-decoration: underline;">follow@thetenets.org</a>
+            </div>
+            <div class="social-media">
+                <a href="https://bsky.app/profile/thetenets.org" class="social-link" target="_blank">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 2.104.139 3.309.139 5.283.902 6.488c.659.838 1.664 1.16 4.3-.701C7.954 4.747 10.913 8.686 12 10.8zm0 0c1.087-2.114 4.046-6.053 6.798-7.995C21.434.944 22.439 1.266 23.098 2.104c.763 1.205.763 3.179 0 4.384-.659.838-1.664 1.16-4.3-.701C16.046 4.747 13.087 8.686 12 10.8zm0 2.4c-1.087 2.114-4.046 6.053-6.798 7.995-2.636 1.861-3.641 1.539-4.3.701-.763-1.205-.763-3.179 0-4.384.659-.838 1.664-1.16 4.3.701C7.954 19.253 10.913 15.314 12 13.2zm0 0c1.087 2.114 4.046 6.053 6.798 7.995 2.636 1.861 3.641 1.539 4.3.701.763-1.205.763-3.179 0-4.384-.659-.838-1.664-1.16-4.3.701C16.046 19.253 13.087 15.314 12 13.2z"/>
+                    </svg>
+                    Follow on Bluesky
+                </a>
+            </div>
         </div>
     </div>
 </body>
