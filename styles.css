@@ -236,9 +236,20 @@
             line-height: 1.8;
             font-size: 1.1em;
             text-align: left;
-            }
+        }
             
         li {
+            margin-bottom: 8px;
+        }
+
+        .statement-list {
+            margin-left: 40px;  /* More indentation than practice lists */
+            line-height: 1.8;
+            font-size: 1.3em;   /* Same as .statement-text */
+            text-align: left;
+        }
+            
+        .statement-list li {
             margin-bottom: 8px;
         }
 
