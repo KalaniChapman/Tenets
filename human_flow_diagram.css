@@ -1,20 +1,5 @@
 body {
     font-family: 'Georgia', 'Times New Roman', serif;
-    background: linear-gradient(135deg, #8B4513 0%, #DEB887 50%, #8B4513 100%);
-    margin: 0;
-    padding: 20px 0;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.diagram-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: calc(100vh - 80px);
-    padding: 20px;
 }
 
 .diagram-container {
