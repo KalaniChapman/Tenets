@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Human Flow - Twelve Qualities</title>
+    <style>
+        /* Navigation styles */
+        .navigation {
+            text-align: center;
+            padding: 10px 0;
+        }
+        
+        .nav-links {
+            display: inline-flex;
+            gap: 30px;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        
+        .nav-link {
+            color: #F5F5DC;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            background: rgba(245,245,220,0.1);
+            text-decoration: underline;
+        }
+        
+        .nav-link.active {
+            background: rgba(245,245,220,0.15);
+            color: #FFFACD;
+        }
+
+        .nav-logo {
+            color: #F5F5DC;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-logo:hover {
+            background: rgba(245,245,220,0.1);
+        }
+
+        .logo-img {
+            width: 24px;
+            height: 24px;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background: linear-gradient(135deg, #8B4513 0%, #DEB887 50%, #8B4513 100%);
+            margin: 0;
+            padding: 20px 0;
+            min-height: 100vh;
+        }
+
+        .diagram-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: calc(100vh - 80px);
+            padding: 20px;
+        }
+
+        .diagram-container {
+            width: 800px;
+            height: 800px;
+            position: relative;
+            background: linear-gradient(to bottom, 
+                #f4f1e8 0%, 
+                #f9f6f0 20%, 
+                #f4f1e8 40%, 
+                #f9f6f0 60%, 
+                #f4f1e8 80%, 
+                #f9f6f0 100%);
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 
+                0 10px 30px rgba(0,0,0,0.3),
+                inset 0 1px 0 rgba(255,255,255,0.2),
+                inset 0 -1px 0 rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .center-circle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 160px;
+            height: 160px;
+            background: linear-gradient(45deg, #8B4513, #A0522D);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #f4f1e8;
+            font-weight: bold;
+            font-size: 18px;
+            text-align: center;
+            box-shadow: 0 8px 24px rgba(139, 69, 19, 0.3);
+            z-index: 10;
+        }
+
+        .quality-group {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .quality-group:hover {
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+        }
+
+        .inner {
+            top: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, #D2B48C, #F5DEB3);
+            border: 2px solid rgba(139, 69, 19, 0.2);
+        }
+
+        .outer {
+            top: 50%;
+            right: 50px;
+            transform: translateY(-50%);
+            background: linear-gradient(135deg, #DEB887, #F0E68C);
+            border: 2px solid rgba(139, 69, 19, 0.2);
+        }
+
+        .knowledge {
+            bottom: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, #D2B48C, #DAA520);
+            border: 2px solid rgba(139, 69, 19, 0.2);
+        }
+
+        .creative {
+            top: 50%;
+            left: 50px;
+            transform: translateY(-50%);
+            background: linear-gradient(135deg, #CD853F, #F4A460);
+            border: 2px solid rgba(139, 69, 19, 0.2);
+        }
+
+        .group-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 12px;
+            color: #2c1810;
+            font-family: 'Georgia', serif;
+            text-decoration: underline;
+        }
+
+        .quality-item {
+            font-size: 16px;
+            margin: 4px 0;
+            color: #2c1810;
+            font-weight: bold;
+            font-family: 'Georgia', serif;
+            font-style: italic;
+        }
+
+        .subtitle {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 16px;
+            color: #8B4513;
+            text-align: center;
+            font-style: italic;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navigation">
+        <div class="nav-links">
+            <a href="index.html" class="nav-logo">
+                <img src="images/favicon32.png" alt="Tenets Logo" class="logo-img">
+            </a>
+            <a href="index.html" class="nav-link">The Tenets</a>
+            <a href="statement.html" class="nav-link">Why?</a>
+            <a href="qualities_diagram.html" class="nav-link active">Human Flow</a>
+        </div>
+    </div>
+
+    <div class="diagram-wrapper">
+        <div class="diagram-container">
+            <div class="subtitle">Human Flow</div>
+            
+            <div class="center-circle">
+                <img src="dara_knot_transparent_bg.png" 
+                     alt="Dara Knot" 
+                     style="width: 140px; height: 140px; position: absolute; opacity: 0.3;">
+                <div style="position: relative; z-index: 1;">HUMAN<br>FLOURISHING</div>
+            </div>
+
+            <div class="quality-group inner">
+                <div class="group-title">Inner Orientation</div>
+                <div class="quality-item">Humility</div>
+                <div class="quality-item">Equanimity</div>
+                <div class="quality-item">Acceptance</div>
+            </div>
+
+            <div class="quality-group outer">
+                <div class="group-title">Outer Orientation</div>
+                <div class="quality-item">Compassion</div>
+                <div class="quality-item">Dialogue</div>
+                <div class="quality-item">Advocacy</div>
+            </div>
+
+            <div class="quality-group knowledge">
+                <div class="group-title">Knowledge & Truth</div>
+                <div class="quality-item">Discernment</div>
+                <div class="quality-item">Integrity</div>
+                <div class="quality-item">Synthesis</div>
+            </div>
+
+            <div class="quality-group creative">
+                <div class="group-title">Creative Contribution</div>
+                <div class="quality-item">Purpose</div>
+                <div class="quality-item">Reverence</div>
+                <div class="quality-item">Stewardship</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add directional hover interactions
+        document.querySelectorAll('.quality-group').forEach(group => {
+            group.addEventListener('mouseenter', function() {
+                if (this.classList.contains('inner')) {
+                    // Inner moves toward outer (right)
+                    this.style.transform = 'translateX(-50%) translateX(10px) rotate(3deg) scale(1.05)';
+                } else if (this.classList.contains('outer')) {
+                    // Outer moves toward knowledge (down)
+                    this.style.transform = 'translateY(-50%) translateY(10px) rotate(3deg) scale(1.05)';
+                } else if (this.classList.contains('knowledge')) {
+                    // Knowledge moves toward creative (left)
+                    this.style.transform = 'translateX(-50%) translateX(-10px) rotate(3deg) scale(1.05)';
+                } else if (this.classList.contains('creative')) {
+                    // Creative moves toward inner (up)
+                    this.style.transform = 'translateY(-50%) translateY(-10px) rotate(3deg) scale(1.05)';
+                }
+            });
+            
+            group.addEventListener('mouseleave', function() {
+                // Reset to original CSS transform
+                this.style.transform = '';
+            });
+        });
+
+        // Add click interaction for center circle
+        document.querySelector('.center-circle').addEventListener('click', function() {
+            this.style.animation = 'pulse 0.6s ease-in-out';
+            setTimeout(() => {
+                this.style.animation = '';
+            }, 600);
+        });
+
+        // Add CSS for pulse animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes pulse {
+                0% { transform: translate(-50%, -50%) scale(1); }
+                50% { transform: translate(-50%, -50%) scale(1.1); }
+                100% { transform: translate(-50%, -50%) scale(1); }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
