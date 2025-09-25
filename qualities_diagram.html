@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Twelve Virtues Diagram</title>
+    <title>Twelve Qualities Diagram</title>
     <style>
         body {
             font-family: 'Georgia', 'Times New Roman', serif;
@@ -56,7 +56,7 @@
             z-index: 10;
         }
 
-        .virtue-group {
+        .quality-group {
             position: absolute;
             width: 200px;
             height: 200px;
@@ -71,7 +71,7 @@
             transition: all 0.3s ease;
         }
 
-        .virtue-group:hover {
+        .quality-group:hover {
             box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
         }
 
@@ -116,7 +116,7 @@
             text-decoration: underline;
         }
 
-        .virtue-item {
+        .quality-item {
             font-size: 16px;
             margin: 4px 0;
             color: #2c1810;
@@ -145,38 +145,38 @@
         <div class="subtitle">Human Flow</div>
         
         <div class="center-circle">
-            <img src="" 
-                 alt="Celtic Knot" 
-                 style="width: 80px; height: 80px; position: absolute; opacity: 0.3;">
+            <img src="dara_knot_transparent_bg.png" 
+                 alt="Dara Knot" 
+                 style="width: 140px; height: 140px; position: absolute; opacity: 0.3;">
             <div style="position: relative; z-index: 1;">HUMAN<br>FLOURISHING</div>
         </div>
 
-        <div class="virtue-group inner">
+        <div class="quality-group inner">
             <div class="group-title">Inner Orientation</div>
-            <div class="virtue-item">Humility</div>
-            <div class="virtue-item">Equanimity</div>
-            <div class="virtue-item">Acceptance</div>
+            <div class="quality-item">Humility</div>
+            <div class="quality-item">Equanimity</div>
+            <div class="quality-item">Acceptance</div>
         </div>
 
-        <div class="virtue-group outer">
+        <div class="quality-group outer">
             <div class="group-title">Outer Orientation</div>
-            <div class="virtue-item">Compassion</div>
-            <div class="virtue-item">Dialogue</div>
-            <div class="virtue-item">Advocacy</div>
+            <div class="quality-item">Compassion</div>
+            <div class="quality-item">Dialogue</div>
+            <div class="quality-item">Advocacy</div>
         </div>
 
-        <div class="virtue-group knowledge">
+        <div class="quality-group knowledge">
             <div class="group-title">Knowledge & Truth</div>
-            <div class="virtue-item">Discernment</div>
-            <div class="virtue-item">Integrity</div>
-            <div class="virtue-item">Synthesis</div>
+            <div class="quality-item">Discernment</div>
+            <div class="quality-item">Integrity</div>
+            <div class="quality-item">Synthesis</div>
         </div>
 
-        <div class="virtue-group creative">
+        <div class="quality-group creative">
             <div class="group-title">Creative Contribution</div>
-            <div class="virtue-item">Purpose</div>
-            <div class="virtue-item">Reverence</div>
-            <div class="virtue-item">Stewardship</div>
+            <div class="quality-item">Purpose</div>
+            <div class="quality-item">Reverence</div>
+            <div class="quality-item">Stewardship</div>
         </div>
 
 
@@ -184,7 +184,7 @@
 
     <script>
         // Add directional hover interactions
-        document.querySelectorAll('.virtue-group').forEach(group => {
+        document.querySelectorAll('.quality-group').forEach(group => {
             group.addEventListener('mouseenter', function() {
                 if (this.classList.contains('inner')) {
                     // Inner moves toward outer (right)
