@@ -302,7 +302,7 @@
             }
 
             .wide-container {
-                max-width: 1200px; /* Adjust this value based on your diagram width */
+                max-width: 1600px; /* Adjust this value based on your diagram width */
             }
 
             @media (max-width: 768px) {
