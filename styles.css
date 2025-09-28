@@ -292,8 +292,8 @@
             }
             
             .lotus-diagram {
-                min-width: 800px;
-                max-width: none;
+                max-width: 100%; /* Let it scale down on smaller screens */
+                width: auto; /* Maintain aspect ratio */
                 height: auto;
                 border-radius: 10px;
                 box-shadow: 0 4px 15px rgba(0,0,0,0.1);
@@ -331,7 +331,8 @@
                 }
                 
                 .lotus-diagram {
-                    min-width: 600px;
+                    min-width: 800px; /* Only enforce minimum width on mobile */
+                    max-width: none; /* Remove scaling restriction on mobile */
                     padding: 10px;
                 }
             }
