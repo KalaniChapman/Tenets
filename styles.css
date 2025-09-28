@@ -282,8 +282,26 @@
         .social-link:hover {
             text-decoration: underline;
         }
-        
-        @media (max-width: 768px) {
+
+            .diagram-container {
+                text-align: center;
+                margin: 40px 0;
+                padding: 20px;
+                overflow-x: auto;
+                overflow-y: visible;
+            }
+            
+            .lotus-diagram {
+                min-width: 800px;
+                max-width: none;
+                height: auto;
+                border-radius: 10px;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+                background: rgba(255,255,255,0.8);
+                padding: 20px;
+            }
+
+            @media (max-width: 768px) {
                 .scroll-container {
                     padding: 40px 30px;
                     transform: rotate(0deg);
@@ -293,7 +311,7 @@
                     font-size: 2em;
                 }
                 
-                .statement-text, .tenet-text {  /* Change this line */
+                .statement-text, .tenet-text {
                     font-size: 1.1em;
                 }
                 
@@ -301,4 +319,15 @@
                     flex-direction: column;
                     gap: 15px;
                 }
-        }
+                
+                /* Add the new lotus-diagram styles here */
+                .diagram-container {
+                    margin: 20px 0;
+                    padding: 10px;
+                }
+                
+                .lotus-diagram {
+                    min-width: 600px;
+                    padding: 10px;
+                }
+            }
