@@ -171,12 +171,12 @@
     }
   },
   "evenSpreadProfile": {
-    "name": "The Integrator",
-    "baseDescription": "Your responses suggest relatively balanced engagement across all inner qualities without strong directional preferences. This pattern could indicate several things: You may have genuinely developed across all these dimensions and don't experience strong pulls toward particular approaches when facing choices. You may be highly context-dependent, choosing different qualities based on specific situations rather than consistent personal tendencies. Or you may still be discovering your preferences and find value in multiple approaches.",
-    "focusTemplate": " Your current focus appears to be on {virtues}.",
-    "emergingTemplate": " {virtues} represent emerging developmental areas.",
+    "name": "Balanced",
+    "baseDescription": "You are relatively balanced across all the qualities, without strong preferences. You have a flexible approach, and favour different qualities depending on the situation. You may also still be discovering your preferences and find value in multiple approaches.",
+    "focusTemplate": " You're currently focused on {virtues}.",
+    "emergingTemplate": " {virtues} might benefit from some consideration.",
     "closingText": " Your strength is in flexibility and seeing merit across different ways of engaging with life. You're unlikely to be rigidly committed to one approach or blind to entire dimensions of inner development.",
-    "growth": "clarifying your directional focus. Sometimes having strong preferences and directional focus allows for depth and distinctive contribution that balanced engagement doesn't provide. Consider whether your balance represents genuine integration or whether clarifying your priorities might serve you better"
+    "growth": "clarifying your focus. Sometimes having strong preferences allows for depth and distinctive contribution that balanced engagement doesn't provide. Consider whether your balance represents genuine integration or whether clarifying your priorities might serve you better"
   },
   "evenSpreadNames": {
     "acceptance-discernment-equanimity": "The Centered Analyst",
