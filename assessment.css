@@ -1,0 +1,302 @@
+/* Assessment-specific styles */
+
+.instructions {
+    font-size: 1.2em;
+    margin: 30px 0;
+    padding: 20px;
+    background: rgba(139, 69, 19, 0.1);
+    border-radius: 8px;
+    border-left: 4px solid #8B4513;
+    color: #2c1810;
+    text-align: left;
+    line-height: 1.7;
+}
+
+.question {
+    margin-bottom: 35px;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    border: 2px solid rgba(139, 69, 19, 0.2);
+    transition: all 0.3s ease;
+}
+
+.question:hover {
+    border-color: rgba(139, 69, 19, 0.4);
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.question h3 {
+    color: #8B4513;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+    text-align: left;
+}
+
+.question-text {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    line-height: 1.7;
+    color: #2c1810;
+    text-align: left;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.option {
+    display: flex;
+    align-items: flex-start;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.5);
+    border: 2px solid rgba(139, 69, 19, 0.2);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.option:hover {
+    border-color: #8B4513;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.option input[type="radio"] {
+    margin-right: 12px;
+    margin-top: 3px;
+    cursor: pointer;
+    accent-color: #8B4513;
+}
+
+.option-text {
+    flex: 1;
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #2c1810;
+    text-align: left;
+}
+
+.submit-section {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 2px solid rgba(139, 69, 19, 0.3);
+    text-align: center;
+}
+
+.submit-btn {
+    background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+    color: #F5F5DC;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.2em;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Times New Roman', serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.results {
+    display: none;
+    margin-top: 40px;
+    padding-top: 40px;
+    border-top: 3px double rgba(139, 69, 19, 0.4);
+}
+
+.virtue-score {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 8px;
+    border-left: 4px solid #8B4513;
+}
+
+.virtue-name {
+    font-weight: bold;
+    color: #2c1810;
+    font-size: 1.1em;
+    min-width: 130px;
+}
+
+.virtue-points {
+    font-weight: bold;
+    color: #8B4513;
+    font-size: 1.1em;
+    min-width: 50px;
+    text-align: right;
+}
+
+.progress-bar {
+    height: 10px;
+    background: rgba(139, 69, 19, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 0 15px;
+    flex: 1;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #8B4513 0%, #A0522D 100%);
+    transition: width 0.6s ease;
+    border-radius: 5px;
+}
+
+.profile-content {
+    margin-top: 30px;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    border: 2px solid rgba(139, 69, 19, 0.3);
+}
+
+.profile-content h3 {
+    color: #8B4513;
+    margin-bottom: 20px;
+    font-size: 1.6em;
+    text-align: center;
+}
+
+.virtue-description {
+    line-height: 1.8;
+    font-size: 1.2em;
+    color: #2c1810;
+    text-align: left;
+}
+
+.virtue-description p {
+    margin-bottom: 15px;
+}
+
+.virtue-description strong {
+    color: #8B4513;
+}
+
+.signup-section {
+    margin-top: 40px;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+    border: 2px solid rgba(139, 69, 19, 0.3);
+}
+
+.signup-section h3 {
+    color: #8B4513;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+    text-align: center;
+}
+
+.signup-text {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    font-size: 1.1em;
+    color: #2c1810;
+    text-align: center;
+}
+
+.signup-form {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.email-input {
+    flex: 1;
+    min-width: 250px;
+    padding: 12px;
+    border: 2px solid rgba(139, 69, 19, 0.3);
+    border-radius: 6px;
+    font-size: 1em;
+    font-family: 'Times New Roman', serif;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.email-input:focus {
+    outline: none;
+    border-color: #8B4513;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.signup-btn {
+    padding: 12px 25px;
+    background: linear-gradient(135deg, #556B2F 0%, #6B8E23 100%);
+    color: #F5F5DC;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'Times New Roman', serif;
+    font-weight: bold;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+.signup-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.signup-message {
+    margin-top: 15px;
+    font-size: 1em;
+    text-align: center;
+    min-height: 24px;
+}
+
+@media (max-width: 768px) {
+    .question {
+        padding: 20px;
+    }
+    
+    .question-text {
+        font-size: 1.1em;
+    }
+    
+    .option-text {
+        font-size: 1em;
+    }
+    
+    .virtue-score {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    
+    .progress-bar {
+        width: 100%;
+        margin: 5px 0;
+    }
+    
+    .signup-form {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .email-input {
+        width: 100%;
+    }
+    
+    .signup-btn {
+        width: 100%;
+    }
+}
