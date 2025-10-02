@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Inventory</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="values_inventory.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/android-chrome-192x192.png">
+</head>
+<body>
+    <div class="main-container">
+        <div class="navigation">
+            <div class="nav-links">
+                <a href="index.html" class="nav-logo">
+                    <img src="images/favicon32.png" alt="Tenets Logo" class="logo-img">
+                </a>
+                <a href="index.html" class="nav-link">The Tenets</a>
+                <a href="statement.html" class="nav-link">Why?</a>
+                <a href="lotus.html" class="nav-link">Lotus Diagram</a>
+                <a href="assessment.html" class="nav-link">Quiz</a>
+                <a href="values_inventory.html" class="nav-link active">Inventory</a>
+            </div>
+        </div>
+
+        <div class="scroll-container">
+            <div class="aged-paper"></div>
+            <div class="decorative-border"></div>
+            
+            <div class="content">
+                <h1 class="document-title">Qualities & Practices Inventory</h1>
+                <p class="subtitle">Discover your natural tendencies toward being and doing</p>
+
+                <div class="instructions">
+                    For each scenario, <strong>drag and drop</strong> the three response options to rank them by priority - which response matters most to you, which is second, and which is least important. Or click <strong>"Keep Order"</strong> if the current ABC order reflects your priorities.
+                    <br><br>
+                    <strong>Most important</strong> = Top position<br>
+                    <strong>Second priority</strong> = Middle position<br>
+                    <strong>Least important</strong> = Bottom position
+                </div>
+
+                <div class="progress-indicator">
+                    <span id="progress">Question 1 of 24</span>
+                </div>
+
+                <form id="values-form">
+                    <!-- Question 1: Discernment(A), Reverence(B), Humility(C) -->
+                    <div class="question">
+                        <h3>Question 1</h3>
+                        <div class="question-text">You're facing a major life decision and feeling uncertain. You:</div>
+                        <div class="ranking-area" data-question="1">
+                            <div class="ranking-instructions">
+                                <span>Drag to rank by priority (most important at top):</span>
+                                <button type="button" class="keep-order-btn" onclick="keepCurrentOrder(1)">Keep Order</button>
+                            </div>
+                            <div class="option-card" draggable="true" data-value="discernment">
+                                <span class="rank-label">Unranked</span>
+                                <span class="option-text"><strong>A)</strong> Carefully analyze what's actually true versus your assumptions</span>
+                            </div>
+                            <div class="option-card" draggable="true" data-value="reverence">
+                                <span class="rank-label">Unranked</span>
+                                <span class="option-text"><strong>B)</strong> Reflect deeply on what truly matters and what would be most meaningful</span>
+                            </div>
+                            <div class="option-card" draggable="true" data-value="humility">
+                                <span class="rank-label">Unranked</span>
+                                <span class="option-text"><strong>C)</strong> Acknowledge you don't have all the answers and seek guidance</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 2: Equanimity(A), Compassion(B), Acceptance(C) -->
+                    <div class="question">
+                        <h3>Question 2</h3>
+                        <div class="question-text">Two people you care about are in conflict. You:</div>
+                        <div class="ranking-area" data-question="2">
+                            <div class="ranking-instructions">
+                                <span>Drag to rank from most natural (top) to least natural (bottom):</span>
+                                <button type="button" class="keep-order-btn" onclick="keepCurrentOrder(2)">Keep Order</button>
+                            </div>
+                            <div class="option-card" draggable="true" data-value="equanimity">
+                                <span class="rank-label">Unranked</span>
+                                <span class="option-text"><strong>A)</strong> Stay calm and centered rather than getting pulled into drama</span>
+                            </div>
+                            <div class="option-card" draggable="true" data-value="compassion">
+                                <span class="rank-label">Unranked</span>
+                                <span class="option-text"><strong>B)</strong> Stay present with each person's pain in this situation</span>
+                            </div>
+                            <div class="option-card" draggable="true" data-value="acceptance">
+                                <span class="rank-label">Unranked</span>
+                                <span class="option-text"><strong>C)</strong> Accept they have genuine differences that may not resolve</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 3: Synthesis(A), Stewardship(B), Integrity(C) -->
+                    <div class="question">
+                        <h3>Question 3</h3>
+                        <div class="question-text">Your organization has competing initiatives and limited resources. You:</div>
+                        <div class="ranking-area" data-question="3">
+                            <div class="ranking-instructions">
+                                <span>Drag to rank from most natural (top) to least natural (bottom):</span>
+                                <button type="button" class="keep-order-btn" onclick="keepCurrentOrder(3)">Keep Order</button>
+                            </div>
+                            <div class="option-card" draggable="true" data-value="synthesis">
+                                <span class="rank-label">Unranked</span>
+                                <span class="option-text"><strong>A)</strong> Find ways to coordinate initiatives to support each other</span>
+                            </div>
+                            <div class="option-card" draggable="true" data-value="stewardship">
+                                <span class="rank-label">Unranked</span>
+                                <span class="option-text"><strong>B)</strong> Take responsibility for allocating resources wisely</span>
+                            </div>
+                            <div class="option-card" draggable="true" data-value="integrity">
+                                <span class="rank-label">Unranked</span>
+                                <span class="option-text"><strong>C)</strong> Make decisions based on clear principles</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 4: Purpose(A), Advocacy(B), Dialogue(C) -->
+                    <div class="question">
+                        <h3>Question 4</h3>
+                        <div class="question-text">You see an injustice most people are ignoring. You:</div>
+                        <div class="ranking-area" data-question="4">
+                            <div class="ranking-instructions">
+                                <span>Drag to rank from most natural (top) to least natural (bottom):</span>
+                                <button type="button" class="keep-order-btn" onclick="keepCurrentOrder(4)">Keep Order</button>
+                            </div>
+                            <div class="option-card" draggable="true" data-value="purpose">
+                                <span class="rank-label">Unranked</span>
+                                <span class="option-text"><strong>A)</strong> Evaluate whether addressing this aligns with your core direction</span>
+                            </div>
+                            <div class="option-card" draggable="true" data-value="advocacy">
+                                <span class="rank-label">Unranked</span>
+                                <span class="option-text"><strong>B)</strong> Take action to raise awareness and push for change</span>
+                            </div>							
+                            <div class="option-card" draggable="true" data-value="dialogue">
+                                <span class="rank-label">Unranked</span>
+                                <span class="option-text"><strong>C)</strong> Start conversations to help others see what's happening</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 5: Acceptance(A), Stewardship(B), Reverence(C) -->
+                    <div class="question">
+                        <h3>Question 5</h3>
+                        <div class="question-text">Something you've worked toward for years falls through. You:</div>
+                        <div class="ranking-area" data-question="5">
+                            <div class="ranking-instructions">
+                                <span>Drag to rank from most natural (top) to least natural (bottom):</span>
+                                <button type="button" class="keep-order-btn" onclick="keepCurrentOrder(5)">Keep Order</button>
+                            </div>
+                            <div class="option-card" draggable="true" data-value="acceptance">
+                                <span class="rank-label">Unranked</span>
+                                <span class="option-text"><strong>A)</strong> Make peace with what happened and focus on what's next</span>
+                            </div>
+                            <div class="option-card" draggable="true" data-value="stewardship">
+                                <span class="rank-label">Unranked</span>
+                                <span class="option-text"><strong>B)</strong> Assess what you learned and how to better steward future efforts</span>
+                            </div>
+                            <div class="option-card" draggable="true" data-value="reverence">
+                                <span class="rank-label">Unranked</span>
+                                <span class="option-text"><strong>C)</strong> Look for deeper wisdom or meaning in this experience</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 6: Integrity(A), Humility(B), Equanimity(C) -->
+                    <div class="question">
+                        <h3>Question 6</h3>
+                        <div class="question-text">You're managing a struggling project under pressure. You:</div>
+                        <div class="ranking-area" data-question="6">
+                            <div class="ranking-instructions">
+                                <span>Drag to rank from most natural (top) to least natural (bottom):</span>
+                                <button type="button" class="keep-order-btn" onclick="keepCurrentOrder(6)">Keep Order</button>
+                            </div>
+                            <div class="option-card" draggable="true" data-value="integrity">
+                                <span class="rank-label">Unranked</span>
+                                <span class="option-text"><strong>A)</strong> Be honest with stakeholders about the real situation</span>
+                            </div>
+                            <div class="option-card" draggable="true" data-value="humility">
+                                <span class="rank-label">Unranked</span>
+                                <span class="option-text"><strong>B)</strong> Acknowledge what's not working and what you need to learn</span>
+                            </div>
+                            <div class="option-card" draggable="true" data-value="equanimity">
+                                <span class="rank-label">Unranked</span>
+                                <span class="option-text"><strong>C)</strong> Stay calm and avoid reactive decisions</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 7: Purpose(A), Discernment(B), Compassion(C) -->
+                    <div class="question">
+                        <h3>Question 7</h3>
+                        <div class="question-text">A colleague is consistently underperforming and seems overwhelmed. You:</div>
+                        <div class="ranking-area" data-question="7">
+                            <div class="ranking-instructions">
+                                <span>Drag to rank from most natural (top) to least natural (bottom):</span>
+                                <button type="button" class="keep-order-btn" onclick="keepCurrentOrder(7)">Keep Order</button>
+                            </div>
+                            <div class="option-card" draggable="true" data-value="purpose">
+                                <span class="rank-label">Unranked</span>
+                                <span class="option-text"><strong>A)</strong> Help them reconnect with what matters in their work</span>
+                            </div>
+                            <div class="option-card" draggable="true" data-value="discernment">
+                                <span class="rank-label">Unranked</span>
+                                <span class="option-text"><strong>B)</strong> Analyze objectively what's really going on</span>
+                            </div>
+                            <div class="option-card" draggable="true" data-value="compassion">
+                                <span class="rank-label">Unranked</span>
+                                <span class="option-text"><strong>C)</strong> Connect with care to understand what they're dealing with</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 8: Advocacy(A), Synthesis(B), Dialogue(C) -->
+                    <div class="question">
+                        <h3>Question 8</h3>
+                        <div class="question-text">Your team is deeply divided on an important decision. You:</div>
+                        <div class="ranking-area" data-question="8">
+                            <div class="ranking-instructions">
+                                <span>Drag to rank from most natural (top) to least natural (bottom):</span>
+                                <button type="button" class="keep-order-btn" onclick="keepCurrentOrder(8)">Keep Order</button>
+                            </div>
+                            <div class="option-card" draggable="true" data-value="advocacy">
+                                <span class="rank-label">Unranked</span>
+                                <span class="option-text"><strong>A)</strong> Champion the option that serves the greater good</span>
+                            </div>
+                            <div class="option-card" draggable="true" data-value="synthesis">
+                                <span class="rank-label">Unranked</span>
+                                <span class="option-text"><strong>B)</strong> Work to integrate different perspectives into a unified approach</span>
+                            </div>
+                            <div class="option-card" draggable="true" data-value="dialogue">
+                                <span class="rank-label">Unranked</span>
+                                <span class="option-text"><strong>C)</strong> Create space for genuine conversation between viewpoints</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 9: Compassion(A), Reverence(B), Humility(C) - bonus: reverence-humility -->
+                    <div class="question">
+                        <h3>Question 9</h3>
+                        <div class="question-text">Someone shares a worldview very different from yours. You:</div>
+                        <div class="ranking-area" data-question="9">
+                            <div class="ranking-instructions">
+                                <span>Drag to rank from most natural (top) to least natural (bottom):</span>
+                                <button type="button" class="keep-order-btn" onclick="keepCurrentOrder(9)">Keep Order</button>
+                            </div>
+                            <div class="option-card" draggable="true" data-value="compassion">
+                                <span class="rank-label">Unranked</span>
+                                <span class="option-text"><strong>A)</strong> Connect with genuine curiosity about their lived reality</span>
+                            </div>
+                            <div class="option-card" draggable="true" data-value="reverence">
+                                <span class="rank-label">Unranked</span>
+                                <span class="option-text"><strong>B)</strong> Look for deeper wisdom or truth in their perspective</span>
+                            </div>
+                            <div class="option-card" draggable="true" data-value="humility">
+                                <span class="rank-label">Unranked</span>
+                                <span class="option-text"><strong>C)</strong> Acknowledge what you might not understand about their experience</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 10: Acceptance(A), Discernment(B), Stewardship(C) - bonus: discernment-acceptance -->
+                    <div class="question">
+                        <h3>Question 10</h3>
+                        <div class="question-text">Your community faces a problem some want to ignore. You:</div>
+                        <div class="ranking-area" data-question="10">
+                            <div class="ranking-instructions">
+                                <span>Drag to rank from most natural (top) to least natural (bottom):</span>
+                                <button type="button" class="keep-order-btn" onclick="keepCurrentOrder(10)">Keep Order</button>
+                            </div>
+                            <div class="option-card" draggable="true" data-value="acceptance">
+                                <span class="rank-label">Unranked</span>
+                                <span class="option-text"><strong>A)</strong> Accept the reality and work within those constraints</span>
+                            </div>
+                            <div class="option-card" draggable="true" data-value="discernment">
+                                <span class="rank-label">Unranked</span>
+                                <span class="option-text"><strong>B)</strong> Assess what's actually happening versus assumptions</span>
+                            </div>							
+                            <div class="option-card" draggable="true" data-value="stewardship">
+                                <span class="rank-label">Unranked</span>
+                                <span class="option-text"><strong>C)</strong> Take practical action to address what needs attention</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 11: Integrity(A), Equanimity(B), Compassion(C) - bonus: compassion-equanimity -->
+                    <div class="question">
+                        <h3>Question 11</h3>
+                        <div class="question-text">Someone confides they've done something harmful. You:</div>
+                        <div class="ranking-area" data-question="11">
+                            <div class="ranking-instructions">
+                                <span>Drag to rank from most natural (top) to least natural (bottom):</span>
+                                <button type="button" class="keep-order-btn" onclick="keepCurrentOrder(11)">Keep Order</button>
+                            </div>
+                            <div class="option-card" draggable="true" data-value="integrity">
+                                <span class="rank-label">Unranked</span>
+                                <span class="option-text"><strong>A)</strong> Speak honestly about the impact of their actions</span>
+                            </div>
+                            <div class="option-card" draggable="true" data-value="equanimity">
+                                <span class="rank-label">Unranked</span>
+                                <span class="option-text"><strong>B)</strong> Stay calm and steady so they can be honest</span>
+                            </div>
+                            <div class="option-card" draggable="true" data-value="compassion">
+                                <span class="rank-label">Unranked</span>
+                                <span class="option-text"><strong>C)</strong> Respond with empathy for how difficult this is</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 12: Synthesis(A), Purpose(B), Advocacy(C) -->
+                    <div class="question">
+                        <h3>Question 12</h3>
+                        <div class="question-text">Your organization's strategy seems fragmented. You:</div>
+                        <div class="ranking-area" data-question="12">
+                            <div class="ranking-instructions">
+                                <span>Drag to rank from most natural (top) to least natural (bottom):</span>
+                                <button type="button" class="keep-order-btn" onclick="keepCurrentOrder(12)">Keep Order</button>
+                            </div>
+                            <div class="option-card" draggable="true" data-value="synthesis">
+                                <span class="rank-label">Unranked</span>
+                                <span class="option-text"><strong>A)</strong> Propose ways to unify different initiatives coherently</span>
+                            </div>
+                            <div class="option-card" draggable="true" data-value="purpose">
+                                <span class="rank-label">Unranked</span>
+                                <span class="option-text"><strong>B)</strong> Refocus attention on the core mission and direction</span>
+                            </div>							
+                            <div class="option-card" draggable="true" data-value="advocacy">
+                                <span class="rank-label">Unranked</span>
+                                <span class="option-text"><strong>C)</strong> Speak up about what needs to change</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 13: Discernment(A), Dialogue(B), Reverence(C) -->
+                    <div class="question">
+                        <h3>Question 13</h3>
+                        <div class="question-text">A friend asks your perspective on a major decision. You:</div>
+                        <div class="ranking-area" data-question="13">
+                            <div class="ranking-instructions">
+                                <span>Drag to rank from most natural (top) to least natural (bottom):</span>
+                                <button type="button" class="keep-order-btn" onclick="keepCurrentOrder(13)">Keep Order</button>
+                            </div>
+                            <div class="option-card" draggable="true" data-value="discernment">
+                                <span class="rank-label">Unranked</span>
+                                <span class="option-text"><strong>A)</strong> Help them think through what's actually true versus assumptions</span>
+                            </div>
+                            <div class="option-card" draggable="true" data-value="dialogue">
+                                <span class="rank-label">Unranked</span>
+                                <span class="option-text"><strong>B)</strong> Listen carefully and engage in genuine exploration together</span>
+                            </div>
+                            <div class="option-card" draggable="true" data-value="reverence">
+                                <span class="rank-label">Unranked</span>
+                                <span class="option-text"><strong>C)</strong> Help them explore what would be most meaningful</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 14: Stewardship(A), Humility(B), Acceptance(C) -->
+                    <div class="question">
+                        <h3>Question 14</h3>
+                        <div class="question-text">Someone criticizes your work harshly. You:</div>
+                        <div class="ranking-area" data-question="14">
+                            <div class="ranking-instructions">
+                                <span>Drag to rank from most natural (top) to least natural (bottom):</span>
+                                <button type="button" class="keep-order-btn" onclick="keepCurrentOrder(14)">Keep Order</button>
+                            </div>
+                            <div class="option-card" draggable="true" data-value="stewardship">
+                                <span class="rank-label">Unranked</span>
+                                <span class="option-text"><strong>A)</strong> Focus on what you can improve and do better next time</span>
+                            </div>
+                            <div class="option-card" draggable="true" data-value="humility">
+                                <span class="rank-label">Unranked</span>
+                                <span class="option-text"><strong>B)</strong> Consider whether there's truth you need to hear</span>
+                            </div>
+                            <div class="option-card" draggable="true" data-value="acceptance">
+                                <span class="rank-label">Unranked</span>
+                                <span class="option-text"><strong>C)</strong> Accept this is their honest perception without fighting it</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 15: Purpose(A), Equanimity(B), Discernment(C) -->
+                    <div class="question">
+                        <h3>Question 15</h3>
+                        <div class="question-text">A project you care about keeps hitting obstacles. You:</div>
+                        <div class="ranking-area" data-question="15">
+                            <div class="ranking-instructions">
+                                <span>Drag to rank from most natural (top) to least natural (bottom):</span>
+                                <button type="button" class="keep-order-btn" onclick="keepCurrentOrder(15)">Keep Order</button>
+                            </div>
+                            <div class="option-card" draggable="true" data-value="purpose">
+                                <span class="rank-label">Unranked</span>
+                                <span class="option-text"><strong>A)</strong> Reconnect with why this work matters and where it's headed</span>
+                            </div>
+                            <div class="option-card" draggable="true" data-value="equanimity">
+                                <span class="rank-label">Unranked</span>
+                                <span class="option-text"><strong>B)</strong> Stay emotionally stable despite the challenges</span>
+                            </div>
+                            <div class="option-card" draggable="true" data-value="discernment">
+                                <span class="rank-label">Unranked</span>
+                                <span class="option-text"><strong>C)</strong> Analyze what's actually blocking progress</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 16: Stewardship(A), Synthesis(B), Compassion(C) -->
+                    <div class="question">
+                        <h3>Question 16</h3>
+                        <div class="question-text">You notice someone in your community struggling silently. You:</div>
+                        <div class="ranking-area" data-question="16">
+                            <div class="ranking-instructions">
+                                <span>Drag to rank from most natural (top) to least natural (bottom):</span>
+                                <button type="button" class="keep-order-btn" onclick="keepCurrentOrder(16)">Keep Order</button>
+                            </div>
+                            <div class="option-card" draggable="true" data-value="stewardship">
+                                <span class="rank-label">Unranked</span>
+                                <span class="option-text"><strong>A)</strong> Take practical responsibility for addressing the situation</span>
+                            </div>
+                            <div class="option-card" draggable="true" data-value="synthesis">
+                                <span class="rank-label">Unranked</span>
+                                <span class="option-text"><strong>B)</strong> Consider how different resources could work together to help</span>
+                            </div>
+                            <div class="option-card" draggable="true" data-value="compassion">
+                                <span class="rank-label">Unranked</span>
+                                <span class="option-text"><strong>C)</strong> Reach out with genuine care to understand their experience</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 17: Dialogue(A), Synthesis(B), Integrity(C) - bonus: integrity-synthesis -->
+                    <div class="question">
+                        <h3>Question 17</h3>
+                        <div class="question-text">You're asked to present a strategy that conflicts with your values. You:</div>
+                        <div class="ranking-area" data-question="17">
+                            <div class="ranking-instructions">
+                                <span>Drag to rank from most natural (top) to least natural (bottom):</span>
+                                <button type="button" class="keep-order-btn" onclick="keepCurrentOrder(17)">Keep Order</button>
+                            </div>
+                            <div class="option-card" draggable="true" data-value="dialogue">
+                                <span class="rank-label">Unranked</span>
+                                <span class="option-text"><strong>A)</strong> Start conversations about the underlying concerns</span>
+                            </div>
+                            <div class="option-card" draggable="true" data-value="synthesis">
+                                <span class="rank-label">Unranked</span>
+                                <span class="option-text"><strong>B)</strong> Look for ways to integrate different perspectives into something better</span>
+                            </div>
+                            <div class="option-card" draggable="true" data-value="integrity">
+                                <span class="rank-label">Unranked</span>
+                                <span class="option-text"><strong>C)</strong> Decline clearly and honestly, explaining your concerns</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 18: Purpose(A), Reverence(B), Advocacy(C) -->
+                    <div class="question">
+                        <h3>Question 18</h3>
+                        <div class="question-text">You're asked to lead an important community initiative. You:</div>
+                        <div class="ranking-area" data-question="18">
+                            <div class="ranking-instructions">
+                                <span>Drag to rank from most natural (top) to least natural (bottom):</span>
+                                <button type="button" class="keep-order-btn" onclick="keepCurrentOrder(18)">Keep Order</button>
+                            </div>
+                            <div class="option-card" draggable="true" data-value="purpose">
+                                <span class="rank-label">Unranked</span>
+                                <span class="option-text"><strong>A)</strong> Evaluate whether this aligns with your sense of direction</span>
+                            </div>
+                            <div class="option-card" draggable="true" data-value="reverence">
+                                <span class="rank-label">Unranked</span>
+                                <span class="option-text"><strong>B)</strong> Reflect on whether this serves something truly meaningful</span>
+                            </div>
+                            <div class="option-card" draggable="true" data-value="advocacy">
+                                <span class="rank-label">Unranked</span>
+                                <span class="option-text"><strong>C)</strong> Consider what needs championing in your community</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 19: Integrity(A), Purpose(B), Humility(C) -->
+                    <div class="question">
+                        <h3>Question 19</h3>
+                        <div class="question-text">You're offered a prestigious role requiring ethical compromises. You:</div>
+                        <div class="ranking-area" data-question="19">
+                            <div class="ranking-instructions">
+                                <span>Drag to rank from most natural (top) to least natural (bottom):</span>
+                                <button type="button" class="keep-order-btn" onclick="keepCurrentOrder(19)">Keep Order</button>
+                            </div>
+                            <div class="option-card" draggable="true" data-value="integrity">
+                                <span class="rank-label">Unranked</span>
+                                <span class="option-text"><strong>A)</strong> Turn it down honestly, staying true to what matters</span>
+                            </div>
+                            <div class="option-card" draggable="true" data-value="purpose">
+                                <span class="rank-label">Unranked</span>
+                                <span class="option-text"><strong>B)</strong> Evaluate whether this serves your larger direction</span>
+                            </div>
+                            <div class="option-card" draggable="true" data-value="humility">
+                                <span class="rank-label">Unranked</span>
+                                <span class="option-text"><strong>C)</strong> Acknowledge you might be missing something important</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 20: Advocacy(A), Dialogue(B), Acceptance(C) -->
+                    <div class="question">
+                        <h3>Question 20</h3>
+                        <div class="question-text">Someone keeps raising a topic you've settled internally. You:</div>
+                        <div class="ranking-area" data-question="20">
+                            <div class="ranking-instructions">
+                                <span>Drag to rank from most natural (top) to least natural (bottom):</span>
+                                <button type="button" class="keep-order-btn" onclick="keepCurrentOrder(20)">Keep Order</button>
+                            </div>
+                            <div class="option-card" draggable="true" data-value="advocacy">
+                                <span class="rank-label">Unranked</span>
+                                <span class="option-text"><strong>A)</strong> Speak up about what you see clearly about the situation</span>
+                            </div>
+                            <div class="option-card" draggable="true" data-value="dialogue">
+                                <span class="rank-label">Unranked</span>
+                                <span class="option-text"><strong>B)</strong> Engage genuinely with their continued exploration</span>
+                            </div>
+                            <div class="option-card" draggable="true" data-value="acceptance">
+                                <span class="rank-label">Unranked</span>
+                                <span class="option-text"><strong>C)</strong> Accept they need to process this differently than you did</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 21: Synthesis(A), Equanimity(B), Reverence(C) -->
+                    <div class="question">
+                        <h3>Question 21</h3>
+                        <div class="question-text">A decision is being made that feels deeply wrong. You:</div>
+                        <div class="ranking-area" data-question="21">
+                            <div class="ranking-instructions">
+                                <span>Drag to rank from most natural (top) to least natural (bottom):</span>
+                                <button type="button" class="keep-order-btn" onclick="keepCurrentOrder(21)">Keep Order</button>
+                            </div>
+                            <div class="option-card" draggable="true" data-value="synthesis">
+                                <span class="rank-label">Unranked</span>
+                                <span class="option-text"><strong>A)</strong> Look for aspects you might integrate with your concerns</span>
+                            </div>
+                            <div class="option-card" draggable="true" data-value="equanimity">
+                                <span class="rank-label">Unranked</span>
+                                <span class="option-text"><strong>B)</strong> Stay centered rather than reacting from strong emotion</span>
+                            </div>
+                            <div class="option-card" draggable="true" data-value="reverence">
+                                <span class="rank-label">Unranked</span>
+                                <span class="option-text"><strong>C)</strong> Reflect on what principles and interconnections are truly at stake</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 22: Discernment(A), Stewardship(B), Advocacy(C) - bonus: stewardship-advocacy -->
+                    <div class="question">
+                        <h3>Question 22</h3>
+                        <div class="question-text">Resources in your community are being mismanaged. You:</div>
+                        <div class="ranking-area" data-question="22">
+                            <div class="ranking-instructions">
+                                <span>Drag to rank from most natural (top) to least natural (bottom):</span>
+                                <button type="button" class="keep-order-btn" onclick="keepCurrentOrder(22)">Keep Order</button>
+                            </div>
+                            <div class="option-card" draggable="true" data-value="discernment">
+                                <span class="rank-label">Unranked</span>
+                                <span class="option-text"><strong>A)</strong> Carefully assess what's actually happening</span>
+                            </div>
+                            <div class="option-card" draggable="true" data-value="stewardship">
+                                <span class="rank-label">Unranked</span>
+                                <span class="option-text"><strong>B)</strong> Take responsibility for better management of what's available</span>
+                            </div>
+                            <div class="option-card" draggable="true" data-value="advocacy">
+                                <span class="rank-label">Unranked</span>
+                                <span class="option-text"><strong>C)</strong> Publicly call for better practices and accountability</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 23: Dialogue(A), Compassion(B), Humility(C) -->
+                    <div class="question">
+                        <h3>Question 23</h3>
+                        <div class="question-text">In a meeting, important facts are being misrepresented. You:</div>
+                        <div class="ranking-area" data-question="23">
+                            <div class="ranking-instructions">
+                                <span>Drag to rank from most natural (top) to least natural (bottom):</span>
+                                <button type="button" class="keep-order-btn" onclick="keepCurrentOrder(23)">Keep Order</button>
+                            </div>
+                            <div class="option-card" draggable="true" data-value="dialogue">
+                                <span class="rank-label">Unranked</span>
+                                <span class="option-text"><strong>A)</strong> Ask questions that invite deeper exploration</span>
+                            </div>
+                            <div class="option-card" draggable="true" data-value="compassion">
+                                <span class="rank-label">Unranked</span>
+                                <span class="option-text"><strong>B)</strong> Try to understand why they're presenting it this way</span>
+                            </div>
+                            <div class="option-card" draggable="true" data-value="humility">
+                                <span class="rank-label">Unranked</span>
+                                <span class="option-text"><strong>C)</strong> Consider whether you might be misunderstanding something</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 24: Purpose(A), Integrity(B), Acceptance(C) -->
+                    <div class="question">
+                        <h3>Question 24</h3>
+                        <div class="question-text">A policy will harm vulnerable people. You:</div>
+                        <div class="ranking-area" data-question="24">
+                            <div class="ranking-instructions">
+                                <span>Drag to rank from most natural (top) to least natural (bottom):</span>
+                                <button type="button" class="keep-order-btn" onclick="keepCurrentOrder(24)">Keep Order</button>
+                            </div>
+                            <div class="option-card" draggable="true" data-value="purpose">
+                                <span class="rank-label">Unranked</span>
+                                <span class="option-text"><strong>A)</strong> Assess whether responding aligns with your core direction</span>
+                            </div>
+                            <div class="option-card" draggable="true" data-value="integrity">
+                                <span class="rank-label">Unranked</span>
+                                <span class="option-text"><strong>B)</strong> Take a clear stand based on your principles</span>
+                            </div>
+                            <div class="option-card" draggable="true" data-value="acceptance">
+                                <span class="rank-label">Unranked</span>
+                                <span class="option-text"><strong>C)</strong> Accept this is happening while focusing on what you can influence</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="submit-section">
+                        <button type="submit" class="submit-btn" id="submit-btn" disabled>Complete all rankings to see results</button>
+                    </div>
+                </form>
+
+                <div id="results" class="results">
+                    <h2 class="section-heading">Your Profile</h2>
+                    <div id="profile-content" class="profile-content"></div>
+                    <h3 class="scores-heading">Your Scores</h3>
+                    <p style="text-align: center; color: #6b5744; font-size: 0.95em; margin-bottom: 15px;">Score range: 7 (minimum) to 21 (maximum)</p>
+                    <div id="scores-display" class="scores-grid"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="values_inventory.js"></script>
+</body>
+</html>
