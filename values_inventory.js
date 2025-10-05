@@ -525,11 +525,15 @@ if (orientationDirection) {
     document.getElementById('results').classList.add('show');
     document.getElementById('results').scrollIntoView({ behavior: 'smooth' });
     
-    // Track inventory completion anonymously via invisible iframe
-    const trackingFrame = document.createElement('iframe');
-    trackingFrame.style.display = 'none';
-    trackingFrame.src = 'https://docs.google.com/forms/d/e/1FAIpQLSeaKOSaB50Po8EEsA7IWKlOVvWzvjFTAn_GpQhvmlTtKtPRMA/formResponse?entry.2081342474=inventory_completed&submit=Submit';
-    document.body.appendChild(trackingFrame);
+    // Track inventory completion anonymously via fetch instead
+	fetch('https://docs.google.com/forms/d/e/1FAIpQLSeaKOSaB50Po8EEsA7IWKlOVvWzvjFTAn_GpQhvmlTtKtPRMA/formResponse', {
+	       method: 'POST',
+	       mode: 'no-cors',
+	       headers: {
+	           'Content-Type': 'application/x-www-form-urlencoded',
+	       },
+	       body: 'entry.2081342474=inventory_completed'
+	   });
 }
 
 // Form submission
