@@ -383,31 +383,32 @@ function displayResults(scores) {
         orientationDescriptor = 'strongly';
     }
     
-	// Build orientation text with quality count instead of percentages
-	let orientationText = '';
-	if (orientationDirection) {
-		// Count how many of top 6 qualities are from the dominant orientation
-		const top6Qualities = distribution.sorted.slice(0, 6).map(item => item.quality);
-		const innerQualities = ['reverence', 'humility', 'discernment', 'acceptance', 'equanimity', 'compassion'];
-		const outerQualities = ['stewardship', 'integrity', 'synthesis', 'purpose', 'dialogue', 'advocacy'];
-		
-		const innerCount = top6Qualities.filter(q => innerQualities.includes(q)).length;
-		const outerCount = top6Qualities.filter(q => outerQualities.includes(q)).length;
-		const dominantCount = Math.max(innerCount, outerCount);
-		
-		let countText = '';
-		if (dominantCount === 4) {
-			countText = ` (four of your six top qualities)`;
-		} else if (dominantCount === 5) {
-			countText = ` (five of your six top qualities!)`;
-		} else if (dominantCount === 6) {
-			countText = ` (all of your top qualities!)`;
-		}
-		
-		orientationText = `You are ${orientationDescriptor} ${orientationDirection} focused${countText}`;
-	} else {
-		orientationText = `You are ${orientationDescriptor}`;
-	}
+// Build orientation text with quality count instead of percentages
+let orientationText = '';
+if (orientationDirection) {
+    // Count how many of top 6 qualities are from the dominant orientation
+    const top6Qualities = distribution.sorted.slice(0, 6).map(item => item.quality);
+    const innerQualities = ['reverence', 'humility', 'discernment', 'acceptance', 'equanimity', 'compassion'];
+    const outerQualities = ['stewardship', 'integrity', 'synthesis', 'purpose', 'dialogue', 'advocacy'];
+    
+    const innerCount = top6Qualities.filter(q => innerQualities.includes(q)).length;
+    const outerCount = top6Qualities.filter(q => outerQualities.includes(q)).length;
+    const dominantCount = Math.max(innerCount, outerCount);
+    const dominantPercent = orientationDirection === 'inwardly' ? orientation.innerPercent : orientation.outerPercent;
+    
+    let countText = '';
+    if (dominantCount === 4) {
+        countText = ` (${dominantPercent}%—but four of your six top qualities)`;
+    } else if (dominantCount === 5) {
+        countText = ` (${dominantPercent}%—but five of your six top qualities!)`;
+    } else if (dominantCount === 6) {
+        countText = ` (${dominantPercent}%—but all of your top qualities!)`;
+    }
+    
+    orientationText = `You are ${orientationDescriptor} ${orientationDirection} focused${countText}`;
+} else {
+    orientationText = `You are ${orientationDescriptor}`;
+}
     
     // Identify secondary qualities (positions 4-6)
     const secondaryQualities = distribution.sorted.slice(3, 6)
